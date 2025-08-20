@@ -1,0 +1,51 @@
+{
+    "devname": "n150",
+    "freq_MHz": 1000.0,
+    "wlgroup": "TTSIM",
+    "wlname": "linear_demo",
+    "wlinstance": "demo",
+    "batch": 1,
+    "operatorstats": [
+        {
+            "pipe": "MATRIX",
+            "precision": "INT8",
+            "opnum": 0,
+            "opname": "result",
+            "is_input_node": true,
+            "is_output_node": true,
+            "optype": "MatMul",
+            "op_rpt_count": 1,
+            "attrs": {},
+            "inList": [
+                "input",
+                "weights"
+            ],
+            "outList": [
+                "result.out"
+            ],
+            "domain": "ttsim.common",
+            "opclass": "Matmul",
+            "removed": false,
+            "fused": false,
+            "fused_with_op": "NA",
+            "inElems": 33024,
+            "outElems": 128,
+            "inBytes": 33024,
+            "outBytes": 128,
+            "instrs": {
+                "mac": 32768
+            },
+            "inParamCount": 0,
+            "inActCount": 33024,
+            "outActCount": 128,
+            "instr_count": 32768,
+            "compute_cycles": 1.0,
+            "mem_rd_cycles": 134.0,
+            "mem_wr_cycles": 1.0,
+            "ramp_penalty": 50.0,
+            "rsrc_bnck": "mem",
+            "cycles": 185.0,
+            "msecs": 0.000185
+        }
+    ]
+}

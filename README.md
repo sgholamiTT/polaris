@@ -182,6 +182,20 @@ output_dir/
    - Use `--dryrun` to check configurations
    - Verify file paths and permissions
 
+## ONNX to Polaris Converter
+
+🚀 **NEW**: Convert ONNX models to Polaris workloads automatically!
+
+See [`onnxConverter/`](onnxConverter/) for the complete ONNX to Polaris conversion toolkit that enables rapid model integration.
+
+### Quick Start
+```bash
+cd onnxConverter
+./complete_onnx_to_polaris_pipeline.sh your_model.onnx ModelName modelname
+```
+
+This tool dramatically reduces ONNX model integration time from hours to minutes.
+
 ## Support
 For issues and questions:
 - Check the project repository: https://github.com/tenstorrent/polaris
