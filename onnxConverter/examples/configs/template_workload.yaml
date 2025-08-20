@@ -1,0 +1,18 @@
+# Template for integrating generated workloads
+# Copy and modify this template for your models
+
+workloads:
+  - api: TTSIM
+    name: my_generated_model
+    basedir: workloads
+    module: MyGeneratedModel@MyGeneratedModel.py
+    params:
+      # Add any model-specific parameters here
+      custom_param: value
+    instances:
+      # Different configurations to test
+      small_batch:  {bs: 1, img_height: 224, img_width: 224}
+      medium_batch: {bs: 4, img_height: 224, img_width: 224}
+      large_batch:  {bs: 8, img_height: 224, img_width: 224}
+      # For high-resolution testing
+      high_res:     {bs: 1, img_height: 512, img_width: 512}

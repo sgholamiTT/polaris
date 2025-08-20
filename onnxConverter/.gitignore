@@ -1,0 +1,19 @@
+# Generated files - do not commit
+analysis_output/
+examples/generated_workloads/
+examples/models/
+examples/configs/*.yaml
+!examples/configs/template_workload.yaml
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated ONNX models (except demo files)
+*.onnx
+!examples/models/SimpleCNN.onnx
+
+# Temporary files
+*.tmp
+*.temp
