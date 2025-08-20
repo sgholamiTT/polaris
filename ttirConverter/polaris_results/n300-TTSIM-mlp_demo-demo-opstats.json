@@ -1,0 +1,215 @@
+{
+    "devname": "n300",
+    "freq_MHz": 1000.0,
+    "wlgroup": "TTSIM",
+    "wlname": "mlp_demo",
+    "wlinstance": "demo",
+    "batch": 1,
+    "operatorstats": [
+        {
+            "pipe": "MATRIX",
+            "precision": "INT8",
+            "opnum": 0,
+            "opname": "var_1",
+            "is_input_node": true,
+            "is_output_node": false,
+            "optype": "MatMul",
+            "op_rpt_count": 1,
+            "attrs": {},
+            "inList": [
+                "arg0",
+                "arg1"
+            ],
+            "outList": [
+                "var_1.out"
+            ],
+            "domain": "ttsim.common",
+            "opclass": "Matmul",
+            "removed": false,
+            "fused": false,
+            "fused_with_op": "NA",
+            "inElems": 8320,
+            "outElems": 64,
+            "inBytes": 8320,
+            "outBytes": 64,
+            "instrs": {
+                "mac": 8192
+            },
+            "inParamCount": 0,
+            "inActCount": 8320,
+            "outActCount": 64,
+            "instr_count": 8192,
+            "compute_cycles": 1.0,
+            "mem_rd_cycles": 17.0,
+            "mem_wr_cycles": 1.0,
+            "ramp_penalty": 100.0,
+            "rsrc_bnck": "mem",
+            "cycles": 118.0,
+            "msecs": 0.000118
+        },
+        {
+            "pipe": "VECTOR",
+            "precision": "INT8",
+            "opnum": 1,
+            "opname": "var_3",
+            "is_input_node": true,
+            "is_output_node": false,
+            "optype": "Add",
+            "op_rpt_count": 1,
+            "attrs": {},
+            "inList": [
+                "var_1.out",
+                "arg2"
+            ],
+            "outList": [
+                "var_3.out"
+            ],
+            "domain": "ttsim.common",
+            "opclass": "EltwiseBinary",
+            "removed": false,
+            "fused": true,
+            "fused_with_op": "var_1",
+            "inElems": 128,
+            "outElems": 64,
+            "inBytes": 128,
+            "outBytes": 64,
+            "instrs": {
+                "add": 64
+            },
+            "inParamCount": 0,
+            "inActCount": 128,
+            "outActCount": 64,
+            "instr_count": 64,
+            "compute_cycles": 1.0,
+            "mem_rd_cycles": 1.0,
+            "mem_wr_cycles": 1.0,
+            "ramp_penalty": 100.0,
+            "rsrc_bnck": "NA",
+            "cycles": 0.0,
+            "msecs": 0.0
+        },
+        {
+            "pipe": "VECTOR",
+            "precision": "INT8",
+            "opnum": 2,
+            "opname": "var_5",
+            "is_input_node": false,
+            "is_output_node": false,
+            "optype": "Relu",
+            "op_rpt_count": 1,
+            "attrs": {},
+            "inList": [
+                "var_3.out"
+            ],
+            "outList": [
+                "var_5.out"
+            ],
+            "domain": "ttsim.common",
+            "opclass": "Relu",
+            "removed": false,
+            "fused": false,
+            "fused_with_op": "NA",
+            "inElems": 64,
+            "outElems": 64,
+            "inBytes": 64,
+            "outBytes": 64,
+            "instrs": {
+                "cmp": 64,
+                "mov": 64
+            },
+            "inParamCount": 0,
+            "inActCount": 64,
+            "outActCount": 64,
+            "instr_count": 128,
+            "compute_cycles": 2.0,
+            "mem_rd_cycles": 1.0,
+            "mem_wr_cycles": 1.0,
+            "ramp_penalty": 100.0,
+            "rsrc_bnck": "comp",
+            "cycles": 102.0,
+            "msecs": 0.000102
+        },
+        {
+            "pipe": "MATRIX",
+            "precision": "INT8",
+            "opnum": 3,
+            "opname": "var_7",
+            "is_input_node": true,
+            "is_output_node": false,
+            "optype": "MatMul",
+            "op_rpt_count": 1,
+            "attrs": {},
+            "inList": [
+                "var_5.out",
+                "arg3"
+            ],
+            "outList": [
+                "var_7.out"
+            ],
+            "domain": "ttsim.common",
+            "opclass": "Matmul",
+            "removed": false,
+            "fused": false,
+            "fused_with_op": "NA",
+            "inElems": 2112,
+            "outElems": 32,
+            "inBytes": 2112,
+            "outBytes": 32,
+            "instrs": {
+                "mac": 2048
+            },
+            "inParamCount": 0,
+            "inActCount": 2112,
+            "outActCount": 32,
+            "instr_count": 2048,
+            "compute_cycles": 1.0,
+            "mem_rd_cycles": 5.0,
+            "mem_wr_cycles": 1.0,
+            "ramp_penalty": 100.0,
+            "rsrc_bnck": "mem",
+            "cycles": 106.0,
+            "msecs": 0.000106
+        },
+        {
+            "pipe": "VECTOR",
+            "precision": "INT8",
+            "opnum": 4,
+            "opname": "var_9",
+            "is_input_node": true,
+            "is_output_node": true,
+            "optype": "Add",
+            "op_rpt_count": 1,
+            "attrs": {},
+            "inList": [
+                "var_7.out",
+                "arg4"
+            ],
+            "outList": [
+                "var_9.out"
+            ],
+            "domain": "ttsim.common",
+            "opclass": "EltwiseBinary",
+            "removed": false,
+            "fused": true,
+            "fused_with_op": "var_7",
+            "inElems": 64,
+            "outElems": 32,
+            "inBytes": 64,
+            "outBytes": 32,
+            "instrs": {
+                "add": 32
+            },
+            "inParamCount": 0,
+            "inActCount": 64,
+            "outActCount": 32,
+            "instr_count": 32,
+            "compute_cycles": 1.0,
+            "mem_rd_cycles": 1.0,
+            "mem_wr_cycles": 1.0,
+            "ramp_penalty": 100.0,
+            "rsrc_bnck": "NA",
+            "cycles": 0.0,
+            "msecs": 0.0
+        }
+    ]
+}
